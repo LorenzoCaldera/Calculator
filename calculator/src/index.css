@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Mono', monospace;
+  box-sizing: border-box;
+}
+
+:root {
+ --c-blue: #3B4664;
+ --c-red: #D9534F;
+ --c-navy-blue: #03254C;
+ --c-dark-blue: #031122;
+ --c-gray: #B5B5B5;
+}
+
+button:focus {
+  outline: none;
+}
+
+button {
+  background-color: white;
+  border: none
+}
+
+body {
+  background-color: var(--c-blue);
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.calculator {
+  margin: auto;
+  max-width: 34.5vw;
+}
+
+#display {
+  padding: 2vh 3vw;
+  width: 100%;
+  overflow-x: scroll;
+  background-color: var(--c-dark-blue);
+  font-size: 3vw;
+  color: white;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.calculator-error {
+  text-align: center;
+}
+
+.calculator-body {
+  display: flex;
+  width: fit-content;
+  margin: 2% 0;
+  padding: 2vw;
+  border-radius: 5px;
+  background-color: var(--c-navy-blue)
+}
+
+.calculator-body button {
+  border-radius: 5px;
+  font-size: 2vw;
+  height: 5vw;
+  width: 5vw;
+  box-shadow: inset 0 -0.35vw rgba(0,0,0,0.5)
+}
+
+.calculator-side-menu {
+  display: grid;
+  font-size: inherit;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2vw;
+  margin-right: 1.2vw;
+}
+
+.calculator-main {
+  display: grid;
+  font-size: inherit;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2vw;
+}
+
+.calculator-main > button:nth-child(1),
+.calculator-main > button:nth-child(2) {
+  grid-column: span 2;
+}
+
+#equals {
+  background-color: var(--c-blue);
+}
+
+#clear,
+#delete {
+  background-color: var(--c-red);
+  width: 12vw;
+}
+
+#divide,
+#multiply,
+#subtract,
+#add {
+  background-color: var(--c-gray);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar {
+  display: none;
+}
